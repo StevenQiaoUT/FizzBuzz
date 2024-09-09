@@ -5,10 +5,7 @@ class FizzBuzz {
 
     public static void main(String[] args) {
 
-        int i = 0;
-        while (i < 100) {
-            i = doFizzBuzz(i);
-        }
+
 
         /*for (int i = 1; i < 100; i++) {
 
@@ -37,17 +34,19 @@ class FizzBuzz {
         }*/
     }
 
-    private static int doFizzBuzz(int i) {
-        if (i % 3 == 0 && i % 5 == 0) {
-            System.out.println("FizzBuzz");
-        } else if (i % 3 == 0) {
-            System.out.println("Fizz");
-        } else if (i % 5 == 0) {
-            System.out.println("Buzz");
-        } else {
-            System.out.println(i);
+    public static void doFizzBuzz(int i) {
+        int j = 0;
+        while (j < i) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+            j++;
         }
-        i++;
-        return i;
     }
 }
